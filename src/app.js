@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (request, response) => {
-  return response.json({teste: "teste"});
+  return response.send("Hello World");
 });
 
 app.get("/webhook", (request, response) => {
