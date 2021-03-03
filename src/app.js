@@ -8,6 +8,10 @@ const Hook = new webhook.Webhook("https://discord.com/api/webhooks/8167750806838
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (request, response) => {
+  return response.json({teste: "teste"});
+});
+
 app.get("/webhook", (request, response) => {
   const { message } = request.query;
   console.log(message)
